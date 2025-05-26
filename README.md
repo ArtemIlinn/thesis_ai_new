@@ -4,7 +4,7 @@
 ## Video Presentation
 [Watch the video presentation here](https://github.com/ArtemIlinn/thesis_ai_new/raw/main/video_presentation.mp4)
 
-![alt text](https://github.com/ArtemIlinn/thesis_ai_new/picture_presentation.png)
+![alt text](https://github.com/ArtemIlinn/thesis_ai_new/blob/main/picture_presentation.png)
 
 
 
