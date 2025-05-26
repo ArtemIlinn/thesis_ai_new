@@ -2,10 +2,11 @@
 
 
 ## Video Presentation
-<video controls width="600">
-  <source src="https://github.com/ArtemIlinn/thesis_ai_new/raw/main/video_presentation.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
+[Watch the video presentation here](https://github.com/ArtemIlinn/thesis_ai_new/raw/main/video_presentation.mp4)
+
+![alt text](https://github.com/ArtemIlinn/thesis_ai_new/picture_presentation.png)
+
+
 
 
 The solution boasts a user-friendly interface
