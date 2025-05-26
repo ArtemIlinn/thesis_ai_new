@@ -1,0 +1,448 @@
+/* Adjust container for header */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.container {
+    display: flex;
+    height: calc(100vh - 80px);
+    padding: 8px;
+    box-sizing: border-box;
+}
+
+/* Keep previous chat container styles but adjust heights */
+.chat-container {
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    min-height: 0; /* Crucial for proper sizing */
+}
+
+
+.bot-container {
+    flex: 3; /* 75% width */
+    margin: 8px 4px 8px 8px;
+    background-color: #f0f4c3;
+    border: 5px solid #dce775;
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    box-sizing: border-box;
+    padding-top: 0;
+}
+
+.bot-container .header {
+    margin: 0 0;  /* Expand header to container edges */
+    padding: 7px 20px;
+    border-radius: 16px 16px 0 0;
+    /*box-shadow: 0 2px 4px rgba(0,0,0,0.05);*/
+}
+
+.user-container {
+    flex: 1; /* 25% width */
+    margin: 8px 8px 8px 4px;
+    background-color: #e3f2fd;
+    border: 5px solid #90caf9;
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    box-sizing: border-box;
+    padding-top: 0;
+}
+
+header {
+    height: 50px;
+    padding: 10px 25px;
+    /*background-color: #e3f2fd;*/
+    /*background: radial-gradient(circle,rgba(63, 94, 251, 1) 0%, rgba(252, 70, 107, 1) 100%);*/
+    /*background: linear-gradient(90deg,rgba(144, 202, 249, 1) 0%, rgba(43, 255, 227, 1) 50%, rgba(220, 231, 117, 1) 100%);*/
+    background: linear-gradient(90deg,rgba(144, 202, 249, 1) 0%, rgba(0, 178, 255, 1) 50%, rgba(220, 231, 117, 1) 100%);
+
+
+    border-bottom: 2px solid #90caf9;
+    flex-shrink: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    z-index: 1000;
+    position: relative;
+
+    
+}
+
+.message-area {
+    flex: 1;
+    overflow-y: auto;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.full-width-messages {
+    background-color: white;
+    padding: 15px;
+}
+
+.input-area {
+    padding: 10px;
+    border-top: 2px solid #ccc;
+}
+
+input[type="text"] {
+    width: 70%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-right: 5px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #2196F3;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background-color: #dce775;
+    border: 1px solid #dce775;
+    color: black;
+    
+}
+
+/* static/styles.css */
+/* ... (keep previous container styles) ... */
+
+#user-messages {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 4px; /* Reduced gap between messages */
+}
+
+#user-messages .message {
+    background-color: #e3f2fd;
+    border: 1px solid #2196F3;
+    border-radius: 12px;
+    padding: 4px 10px;
+    margin: 0;
+    max-width: 90%;
+    word-break: break-word;
+    font-size: 0.9em;
+    line-height: 1.4;
+}
+
+#bot-messages .message {
+    padding: 6px 0;
+    margin: 6px 0;
+    border-bottom: 1px solid #eee;
+    font-size: 0.95em;
+    line-height: 1.5;
+}
+
+/* Add this to ensure proper spacing */
+.message-area {
+    gap: 10px;
+}
+
+.logo {
+    font-size: 1.8em;
+    font-weight: bold;
+    color: /*#1a73e8;*/ white;
+    letter-spacing: -0.5px;
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+}
+
+.logo::before {
+    /*content: "▷";*/
+    margin-right: 8px;
+    font-size: 1.2em;
+    color: #39FF14;
+}
+
+
+.bot-container .header {
+    padding-left: 40px;  /* Add tab-like indentation */
+    position: relative;
+    background-color: #f0f4c3;  /* Match container background */
+}
+
+/* Create visual tab indicator */
+.bot-container .header::before {
+    content: "";
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 8px;
+    height: 8px;
+    background-color: #4CAF50;
+    border-radius: 50%;
+}
+
+
+
+.user-container .header {
+    padding-left: 40px;
+    position: relative;
+    background-color: #e3f2fd;
+    margin: 0 0;
+    padding: 7px 40px;
+    border-radius: 16px 16px 0 0;
+    /*box-shadow: 0 2px 4px rgba(0,0,0,0.05);*/
+}
+
+.user-container .header::before {
+    content: "";
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 8px;
+    height: 8px;
+    background-color: #2196F3; /* Blue accent color */
+    border-radius: 50%;
+}
+
+
+/*
+.model-selector select {
+    padding: 8px 12px;
+    border-radius: 20px;
+    border: 2px solid #90caf9;
+    background-color: white;
+    font-size: 0.9em;
+    margin-right: 20px;
+}
+
+
+.model-selector select:focus {
+    outline: none;
+    border-color: #2196F3;
+    box-shadow: 0 0 4px rgba(33,150,243,0.3);
+}
+
+.model-selector select:focus {
+    border-color: #dce775;
+    box-shadow: 0 0 6px rgba(204,0,0,0.3);
+    background-color: #dce775;
+}
+
+
+
+*/
+
+.model-selector select {
+    padding: 12px 30px;  /* Increased horizontal padding */
+    border-radius: 30px;  /* More rounded corners */
+    
+   
+
+    background-color: #e3f2fd;
+    border: 2px solid #90caf9;
+
+    color: black;
+    font-size: 1em;
+      /* height: 46px; Slightly taller */
+    appearance: none;  /* Remove default styling */
+    -webkit-appearance: none;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='white'%3e%3cpath d='M7 10l5 5 5-5z'/%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 15px center;
+    background-size: 16px;
+    padding-right: 50px;  /* Space for custom arrow */
+
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+
+
+
+.model-selector select:hover {
+    background-color: #f0f4c3;
+    border: 4px solid #dce775;
+
+    
+}
+
+
+/* datasets */ /* static/styles.css */
+/* Dataset Selector Styles */
+.header-controls {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.dataset-selector {
+    position: relative;
+    display: inline-block;
+}
+
+.dataset-btn {
+    padding: 12px 20px;
+    border-radius: 25px;
+    
+    
+
+    background-color: #e3f2fd;
+    border: 2px solid #90caf9;
+
+    color: black;
+    font-size: 1em;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.dataset-btn:hover {
+    background-color: #f0f4c3;
+    border: 4px solid #dce775;
+}
+
+.dataset-dropdown {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 100%;
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    min-width: 200px;
+    z-index: 2000;
+
+    
+}
+
+.dataset-selector:hover .dataset-dropdown {
+    display: block;
+}
+
+.add-data {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    background: #2196F3;
+    color: white;
+    cursor: pointer;
+    border-radius: 6px 6px 0 0;
+}
+
+.add-data:hover {
+    background: #2196F3;
+}
+
+.dataset-list {
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+.dataset-list div {
+    padding: 10px;
+    cursor: pointer;
+    border-bottom: 1px solid #eee;
+}
+
+.dataset-list div:hover {
+    background-color: #f5f5f5;
+}
+
+
+
+
+/* chart canvas */
+
+/* static/styles.css - Add chart styling */
+.bot-chart {
+    /*margin-top: 15px;*/
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px;
+    background: white;
+}
+/*
+.bot-chart canvas {
+    max-width: 100%;
+    height: auto;
+}*/
+
+.bot-message-content {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+
+/* static/styles.css */
+.plotly-chart-container {
+    margin-top: 10px;
+    width: 100%;
+    min-height: 300px;
+    position: static !important;
+    z-index: auto !important;
+}
+/*
+.plotly-chart-container .plotly {
+    width: 100%!important;
+    height: 300px!important;
+}*/
+
+
+.js-plotly-plot .plotly .main-svg {
+    overflow: visible !important;
+}
+
+
+
+
+/* static/styles.css 
+.chart-container {
+    margin-top: 15px;
+    border: 1px solid #eee;
+    padding: 10px;
+    border-radius: 8px;
+    background: white;
+}
+
+.bot-message {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+}*/
+
+
+/* Add this to your CSS */
+/* .chart-container {
+    /*height: 400px !important;  /* Fixed height for consistency */
+    /* width: 100% !important;
+    /*min-height: 300px;*/
+    /*margin: 15px 0;*/
+    /*position: relative;*/
+/*}*/
+
+.plotly-graph-div {
+    height: 100% !important;
+    width: 100% !important;
+    min-height: 300px;
+}

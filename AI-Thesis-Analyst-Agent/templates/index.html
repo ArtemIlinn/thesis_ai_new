@@ -1,0 +1,88 @@
+<!-- templates/index.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AI Analyst</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+
+    
+</head>
+<body>
+
+
+<!-- templates/index.html -->
+<header>
+    <div class="logo">🤖 AI Analyst</div>
+
+
+    
+
+    <div class="header-controls">
+        <div class="dataset-selector">
+            <button class="dataset-btn">Datasets ▼</button>
+            <div class="dataset-dropdown">
+                <button class="add-data" onclick="document.getElementById('file-input').click()">+ Add New Data</button>
+                <div class="dataset-list"></div>
+            </div>
+            <input type="file" id="file-input" hidden multiple>
+        </div>
+        <div class="model-selector">
+            <!-- Existing model select -->
+            <select id="model-select">
+                {% for key, value in models.items() %}
+                <option value="{{ key }}">{{ value }}</option>
+                {% endfor %}
+            </select>
+        </div>
+    </div>
+</header>
+
+
+
+
+    
+    <div class="container">
+        <div class="chat-container bot-container">
+            <div class="header"> Analysis Responses</div>
+            <div class="message-area full-width-messages" id="bot-messages">
+
+                    <!-- Messages will be added dynamically like this -->
+        
+                    <div class="bot-message">
+                        <div class="bot-text">Response text</div>
+                        <div class="chart-container">
+                            
+                            <!-- Chart HTML will be inserted here -->
+
+                            
+
+                        </div>
+                    </div>
+        
+
+
+            </div>
+
+
+
+        </div>
+
+       
+        
+        <div class="chat-container user-container">
+            <div class="header">  User Queries</div>
+            <div class="message-area" id="user-messages"></div>
+            <div class="input-area">
+                <form id="user-form">
+                    <input type="text" id="user-input" placeholder="Type your question...">
+                    <button type="submit">Send</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
