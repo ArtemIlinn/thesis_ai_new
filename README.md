@@ -2,7 +2,7 @@
 
 
 ## Video Presentation
-[Watch the video presentation here](https://github.com/ArtemIlinn/thesis_ai_new/raw/main/video_presentation.mp4)
+[Watch the video presentation here](https://drive.google.com/file/d/17x17O8or4zylir41e1XPCGYlLQ8h6VqF/view)
 
 ![alt text](https://github.com/ArtemIlinn/thesis_ai_new/blob/main/picture_presentation.png)
 
